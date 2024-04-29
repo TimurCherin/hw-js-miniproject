@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Блог</title>
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index1.js"></script>
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/post_section.html"></include>
-    <script type="module" src="./js/main.js"></script>
+    <form id="createPostForm">
+      <input type="text" id="titleInput" placeholder="Заголовок" required>
+      <textarea id="contentInput" placeholder="Зміст" required></textarea>
+      <button type="submit">Створити пост</button>
+      </form>
+      <div id="postsContainer"></div>
   </body>
 </html>

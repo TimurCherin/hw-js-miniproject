@@ -6,7 +6,8 @@
   "homepage": "https://TimurCherin.github.io/hw-js-miniproject",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /hw-js-miniproject/"
+    "build": "parcel build src/*.html --public-url /hw-js-miniproject/",
+    "server": "npx json-server ./src/posts.json"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "json-server": "^1.0.0-alpha.23",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
