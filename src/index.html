@@ -8,10 +8,15 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+    <div class="section-hero">
+      <h1 class="section-title">Блог</h1>
+      <p class="section-info">Зареєструйся, щоб мати змогу додавати та коментувати статті </p>
+      <button type="button" class="create-post-btn btn">Створити статтю</button>
+         </div>
     <form id="createPostForm">
-      <input type="text" id="titleInput" placeholder="Заголовок" required>
-      <textarea id="contentInput" placeholder="Зміст" required></textarea>
-      <button type="submit">Створити пост</button>
+      <input class="add_title" type="text" id="titleInput" placeholder="Заголовок" required>
+      <textarea class="add_text" id="contentInput" placeholder="Зміст" required></textarea>
+      <button class="submit_btn" type="submit">Створити пост</button>
       </form>
       <div id="postsContainer"></div>
   </body>
