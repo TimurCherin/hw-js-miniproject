@@ -5,7 +5,6 @@ export async function getPosts() {
     try {
         const response = await fetch(urlPost)
         const posts = await response.json()
-        console.log(posts)
         return posts
     } catch (error) {
     console.error(error);
@@ -40,7 +39,7 @@ export async function getPosts() {
     // }
     export async function createPost(newPost) {
     try {
-        fetch(urlPost, {
+        await fetch(urlPost, {
             method: "POST",
             body: JSON.stringify(newPost),
             headers: {
@@ -67,32 +66,23 @@ export async function getPosts() {
     // }
     // }    
 
-// // Видалення поста
-    
-    // async function deletePost(id) {
-    
-    // try {
-    
-    // } catch (error) {
-    
-    // console.error(error);
-    
-    // }
-    
-    // }
-    
-    // // Додавання коментаря до поста
-    
+// Видалення поста
+    export async function deletePost(id) {
+    try {
+    await fetch(`${urlPost}/${id}`, {
+        method: "DELETE"
+    })
+    } catch (error) {
+    console.error(error);
+    }
+    }
+
+    // Додавання коментаря до поста
     // async function createComment(postId, comment) {
-    
     // try {
-    
     // } catch (error) {
-    
     // console.error(error);
-    
     // }
-    
     // }
     
     // // Оновлення відображення постів на сторінці

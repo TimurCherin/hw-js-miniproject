@@ -1,21 +1,10 @@
-<ul class="list">
-  {{#each books}}
-    <li>
-        <h2>{{name}}</h2>
-        <h3>{{author}}</h3>
-        <h4>{{year}}</h4>
-        <h4>{{genre}}</h4>
-    </li>
-  {{/each}}
-</ul>
-
 {{#each posts}}
 <div class="post">
 <h2>{{title}}</h2>
 <p>{{text}}</p>
-<button class="editPostButton" data-id="{{post_id}}">Редагувати</button>
-<button class="deletePostButton" data-id="{{post_id}}">Видалити</button>
-<div class="commentsContainer" data-id="{{post_id}}">
+<button class="editPostButton" data-id="{{id}}">Редагувати</button>
+<button class="deletePostButton" data-id="{{id}}">Видалити</button>
+<div class="commentsContainer" data-id="{{id}}">
 <h3>Коментарі:</h3>
 <ul>
   {{#each coments}}

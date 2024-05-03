@@ -3,7 +3,6 @@ import {createPost} from "./postApi.js"
 import {renderPosts} from "./renderPosts.js"
 const body = document.querySelector("body")
 const userName = "Timur"
-console.log(createPost)
 
 export async function renderCreatePostModal() {
     body.insertAdjacentHTML('afterbegin', createPostModalTemplate());
