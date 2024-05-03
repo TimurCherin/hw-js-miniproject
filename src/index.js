@@ -11,6 +11,7 @@ async function onCreatePostModal(){
         await renderPosts()
         const list = document.querySelector("#postsContainer")
         list.addEventListener("click", onDelPost)
+        // list.addEventListener("click", onAddComment)
     }
     startUp()
     async function onDelPost(e){
@@ -20,3 +21,11 @@ async function onCreatePostModal(){
             renderPosts()
         }
     }
+    // async function onAddComment(e){
+    //     // const commentForm = document.querySelector(".createCommentForm")
+    //     if(e.target.classList.contains("addComment")){
+    //         const postId = e.target.dataset.id
+    //         await deletePost(postId)
+    //         renderPosts()
+    //     }
+    // }

@@ -78,12 +78,19 @@ export async function getPosts() {
     }
 
     // Додавання коментаря до поста
-    // async function createComment(postId, comment) {
-    // try {
-    // } catch (error) {
-    // console.error(error);
-    // }
-    // }
+    export async function createComment(postId, newComment) {
+    try {
+        await fetch(`${urlPost}/${postId}`, {
+            method: "PATCH",
+            body: JSON.stringify(newComment),
+            headers: {
+              "Content-Type": "application/json; charset=UTF-8",
+            },
+          })
+    } catch (error) {
+    console.error(error);
+    }
+    }
     
     // // Оновлення відображення постів на сторінці
 
