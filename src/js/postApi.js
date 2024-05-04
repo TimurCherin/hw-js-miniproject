@@ -10,33 +10,18 @@ export async function getPosts() {
     console.error(error);
     }
     }
-    // Створення нового поста
-    // function MarkUp(){
-    //     const markUp = response.map((obj) => {
-    //         return `<div class="post">
-    //         <h2>${obj.title}</h2>
-    //         <p>${obj.text}</p>
-    //         <button class="editPostButton" data-id="${obj.text}">Редагувати</button>
-    //         <button class="deletePostButton" data-id="${obj.text}">Видалити</button>
-    //         <div class="commentsContainer" data-id="${obj.post_id}">
-    //         <h3>Коментарі:${obj.comments.comment}</h3>
-    //         <ul>
-    //         <li>${obj.comments.comment}</li>
-    //         </ul>
-    //         <form class="createCommentForm">
-    //         <input type="text" class="commentInput" placeholder="Новий коментар" required>
-    //         <button type="submit">Додати коментар</button>
-    //         </form>
-    //         </div>
-    //         </div>`
-    //     })
-    //     wrap.insertAdjacentHTML("beforeend", markUp.join(""))
-    // }
 
-    // submitBtn.addEventListener("submit", onSubmit)
-    // function onSubmit(){
-        
-    // }
+    export async function getPostById(post_id) {
+      try {
+        const response = await fetch(`${urlPost}/${post_id}`);
+        const post = await response.json();
+        console.log('post', post);
+        return post;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
     export async function createPost(newPost) {
     try {
         await fetch(urlPost, {

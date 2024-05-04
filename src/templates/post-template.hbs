@@ -7,12 +7,12 @@
 <div class="commentsContainer" data-id="{{id}}">
 <h3>Коментарі:</h3>
 <ul>
-  {{#each coments}}
+  {{#each comments}}
 <li>{{comment}}</li>
  {{/each}}
 </ul>
-<form class="createCommentForm">
-<input type="text" class="commentInput" placeholder="Новий коментар" required>
+<form class="createCommentForm" data-id="{{id}}">
+<input type="text" class="commentInput" name="comment" placeholder="Новий коментар" required>
 <button class="addComment" type="submit">Додати коментар</button>
 </form>
 </div>
