@@ -63,6 +63,7 @@ export async function getPosts() {
     }
 
     // Додавання коментаря до поста
+    
     export async function createComment(postId, newComment) {
     try {
         await fetch(`${urlPost}/${postId}`, {
@@ -75,4 +76,4 @@ export async function getPosts() {
     } catch (error) {
     console.error(error);
     }
-    }
+    } 
