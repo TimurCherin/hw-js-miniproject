@@ -76,17 +76,3 @@ export async function getPosts() {
     console.error(error);
     }
     }
-    
-    // // Оновлення відображення постів на сторінці
-
-    // function renderPosts(posts) {
-    
-    // }
-    // // Обробник події для створення поста
-    // document.getElementById('createPostForm').addEventListener('submit', cb);
-    // // Обробник події для редагування поста
-    // document.addEventListener('click', cb);
-    // // Обробник події для видалення поста
-    // document.addEventListener('click', cb);
-    // // Обробник події для додавання коментаря
-    // document.addEventListener('submit', cb);
