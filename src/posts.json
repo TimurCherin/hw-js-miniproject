@@ -11,21 +11,21 @@
       "comments": [
         {
           "comment_id": 1,
-          "userName": 1,
+          "userName": "Timur",
           "comment": "Дуже смачно!",
           "date": "dds",
           "like": false
         },
         {
           "comment_id": 1,
-          "userName": 1,
+          "userName": "Timur",
           "comment": "Неперевершений смак",
           "date": "dds",
           "like": false
         },
         {
           "comment_id": 1,
-          "userName": 1,
+          "userName": "Timur",
           "comment": "Гарний рецепт",
           "date": "dds",
           "like": false
