@@ -17,6 +17,4 @@ export async function renderPosts() {
   createPostBtn.addEventListener('click', renderCreatePostModal);
   const list = document.querySelector('#postsContainer');
   list.addEventListener('click', onDelPost);
-  const CommentFormList = document.querySelectorAll('.createCommentForm');
-  CommentFormList.forEach(el => el.addEventListener('submit', onAddComment));
 }
