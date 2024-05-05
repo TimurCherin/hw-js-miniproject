@@ -54,6 +54,12 @@
           "comment": "Дякую за рецепт!",
           "date": "dds",
           "like": false
+        },
+        {
+          "comment": "Гарний рецепт",
+          "userName": "Timur",
+          "date": "05.05.2024, 14:25:17",
+          "like": false
         }
       ]
     },
