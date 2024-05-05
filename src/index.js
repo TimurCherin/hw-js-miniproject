@@ -1,4 +1,4 @@
-import {renderPosts} from "./js/renderPosts"
+import { renderPosts } from "./js/renderPosts"
 
 // Запуск додатку
-    renderPosts()
+renderPosts()
