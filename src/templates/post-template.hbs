@@ -8,13 +8,11 @@
         </div>
     <div class="md:flex-grow">
       <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{{title}}</h2>
-      <p class="leading-relaxed">{{text}}</p><a
-        class="text-pink-600 font-semibold inline-flex items-center mt-4">Read More<svg class="w-4 h-4 ml-2"
-          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M5 12h14"></path>
-          <path d="M12 5l7 7-7 7"></path>
-        </svg></a>
+      <p class="leading-relaxed">{{text}}</p>
+      <a
+        class="text-pink-600 font-semibold inline-flex items-center mt-4" data-id="{{id}}">Read Comment ({{comments.length}})</a>
+        <a class="editPostButton text-gray-600 cursor-pointer items-end text-sm hover:text-pink-600  mt-4 ml-8" data-id="{{id}}">Редагувати</a>
+        <a class="deletePostButton text-gray-600 cursor-pointer items-end text-sm hover:text-pink-600  mt-4 ml-4" data-id="{{id}}">Вилучити</a>
     </div>
   </div>
 </li>
