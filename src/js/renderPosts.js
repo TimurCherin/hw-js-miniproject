@@ -3,6 +3,7 @@ import { getPosts } from './postApi.js';
 import { onDelPost } from './onDel.js';
 import { renderCreatePostModal } from './renderCreatePostModal.js';
 import { renderShowPostModal } from './renderShowPostModal.js';
+import { onEditPost } from './onEditPost.js';
 import { renderEditPostModal } from './renderCreatePostModal.js';
 const postsContainer = document.querySelector('#postsContainer');
 
@@ -14,9 +15,8 @@ export async function renderPosts() {
   const allPostBtn = document.querySelectorAll(".showPostBtn")
   allPostBtn.forEach(el => el.addEventListener("click", renderShowPostModal))
   const createPostBtn = document.querySelector('.create-post-btn');
-  const editPostBtn = document.querySelector(".editPostButton")
   createPostBtn.addEventListener('click', renderCreatePostModal);
   const list = document.querySelector('#postsContainer');
   list.addEventListener('click', onDelPost);
-  editPostBtn.addEventListener("click", renderEditPostModal)
+  list.addEventListener('click', onEditPost);
 }

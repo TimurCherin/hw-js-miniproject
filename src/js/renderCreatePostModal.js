@@ -19,12 +19,4 @@ export async function renderCreatePostModal() {
 
 export async function renderEditPostModal() {
   body.insertAdjacentHTML('afterbegin', editPostModalTemplate());
-  const closeModalBtn = document.querySelector("#closeModalBtn")
-  closeModalBtn.addEventListener("click", onCloseBtn)
-  function onCloseBtn() {
-    const backdrop = document.querySelector('.backdrop');
-    backdrop.remove();
-  }
-  const editPostForm = document.querySelector('#editPostForm');
-  editPostForm.addEventListener('submit', onEditPost);
 }
