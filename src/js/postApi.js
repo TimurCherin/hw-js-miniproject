@@ -1,4 +1,5 @@
 const urlPost = 'http://localhost:3000/posts'
+const urlUser = 'http://localhost:3000/users'
 const wrap = document.querySelector(".postsContainer")
 // Отримання списку постів
 export async function getPosts() {
@@ -35,22 +36,6 @@ export async function createPost(newPost) {
     console.error(error);
   }
 }
-
-// Оновлення поста
-// async function updatePost(newPost) {
-// try {
-//     fetch(urlPost, {
-//         method: "POST",
-//         body: JSON.stringify(newMovie),
-//         headers: {
-//           "Content-Type": "application/json; charset=UTF-8",
-//         },
-//       })
-// } catch (error) {
-// console.error(error);
-// }
-// }    
-
 // Видалення поста
 export async function deletePost(id) {
   try {
@@ -86,4 +71,28 @@ export async function createComment(postId, newComment) {
   } catch (error) {
     console.error(error);
   }
-} 
+}
+
+export async function getUsers() {
+  try {
+    const response = await fetch(urlUser)
+    const users = await response.json()
+    return users
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function createUser(newUser) {
+  try {
+    await fetch(urlUser, {
+      method: "POST",
+      body: JSON.stringify(newUser),
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+    })
+  } catch (error) {
+    console.error(error);
+  }
+}

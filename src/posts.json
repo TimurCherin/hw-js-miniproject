@@ -105,5 +105,15 @@
         }
       ]
     }
+  ],
+  "users": [
+    {
+      "name": "Timur",
+      "password": "2232"
+    },
+    {
+      "name": "guest",
+      "password": "1111"
+    }
   ]
 }
