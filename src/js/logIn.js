@@ -18,7 +18,24 @@ async function onLogIn(e) {
     const data = e.currentTarget.elements;
     const logInName = data.name.value
     const logInPassword = data.password.value
+    const newUser = {
+        "name": logInName,
+        "password": logInPassword
+    }
     const users = await getUsers()
     const currentUser = users.find(user => user.name === logInName);
-
+    if (currentUser) {
+        if (currentUser.password === logInPassword) {
+            alert(`Wellcome ${logInName}`)
+            localStorage.setItem("currentUser", JSON.stringify(currentUser));
+        } else {
+            alert("Wrong password")
+        }
+    } else {
+        createUser(newUser)
+        localStorage.setItem("currentUser", JSON.stringify(newUser));
+    }
+    logInForm.reset()
+    const backdrop = document.querySelector('.backdrop');
+    backdrop.remove();
 }

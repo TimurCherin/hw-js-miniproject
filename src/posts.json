@@ -109,10 +109,22 @@
   "users": [
     {
       "name": "Timur",
-      "password": "2232"
+      "password": "2232",
+      "id": "216a"
     },
     {
       "name": "guest",
+      "password": "1111",
+      "id": "ec23"
+    },
+    {
+      "id": "abd4",
+      "name": "Andrii",
+      "password": "1234"
+    },
+    {
+      "id": "bdfa",
+      "name": "Dany",
       "password": "1111"
     }
   ]
