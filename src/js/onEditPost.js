@@ -30,14 +30,14 @@ export async function onEditPost(e) {
             e.preventDefault();
             const newPost = {};
             const data = e.currentTarget.elements;
-            if (editedTitle !== data.title) {
-                newPost.title = data.title
+            if (editedTitle !== data.title.value) {
+                newPost.title = data.title.value
             }
-            if (editedCategory !== data.category) {
-                newPost.category = data.category
+            if (editedCategory !== data.category.value) {
+                newPost.category = data.category.value
             }
-            if (editedText !== data.text) {
-                newPost.text = data.text
+            if (editedText !== data.text.value) {
+                newPost.text = data.text.value
             }
             console.log(newPost)
             await editPost(postId, newPost)
