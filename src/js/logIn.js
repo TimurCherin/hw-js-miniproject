@@ -1,7 +1,8 @@
 import loginTemplate from "../templates/logIn.hbs"
 import { createUser, getUsers } from "./postApi";
+import { getCurrentUser } from "./getCurrentUser";
 const body = document.querySelector("body")
-const userName = "Timur"
+const userName = getCurrentUser()
 export function renderLogModal(e) {
     body.insertAdjacentHTML('afterbegin', loginTemplate());
     const logInForm = document.querySelector("#logInForm")

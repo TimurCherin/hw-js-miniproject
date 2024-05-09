@@ -1,9 +1,10 @@
 import { createPost } from "./postApi";
 import { renderPosts } from "./renderPosts";
+import { getCurrentUser } from "./getCurrentUser";
 
-const userName = "Timur"
 export async function onCreatePost(e) {
   e.preventDefault();
+  const userName = getCurrentUser()
   const data = e.currentTarget.elements;
   const newPost = {
     title: data.title.value,
