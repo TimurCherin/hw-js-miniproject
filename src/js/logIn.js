@@ -38,4 +38,5 @@ async function onLogIn(e) {
     logInForm.reset()
     const backdrop = document.querySelector('.backdrop');
     backdrop.remove();
+    location.reload();
 }
