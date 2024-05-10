@@ -5,13 +5,14 @@ import { renderCreatePostModal } from './renderCreatePostModal.js';
 import { renderShowPostModal } from './renderShowPostModal.js';
 import { onEditPost } from './onEditPost.js';
 import { renderEditPostModal } from './renderCreatePostModal.js';
+import { getCurrentUser } from './getCurrentUser.js';
 const postsContainer = document.querySelector('#postsContainer');
 
-const userName = 'Timur';
+const userName = getCurrentUser();
 
 export async function renderPosts() {
   const posts = await getPosts();
-  postsContainer.innerHTML = postsTemplate({ posts });
+  postsContainer.innerHTML = postsTemplate({ posts, userName });
   const allPostBtn = document.querySelectorAll(".showPostBtn")
   allPostBtn.forEach(el => el.addEventListener("click", renderShowPostModal))
   const createPostBtn = document.querySelector('.create-post-btn');

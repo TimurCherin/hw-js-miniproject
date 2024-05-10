@@ -1,6 +1,7 @@
 import { getPostById, createComment } from './postApi.js';
 import { renderPosts } from './renderPosts.js';
-const userName = 'Timur';
+import { getCurrentUser } from './getCurrentUser.js';
+const userName = getCurrentUser();
 
 export async function onAddComment(e) {
   e.preventDefault();
